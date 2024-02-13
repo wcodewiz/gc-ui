@@ -1,6 +1,6 @@
 {
     "name": "gc-ui",
-    "version": "1.0.0",
+    "version": "0.1.01",
     "description": "a grambid react component system",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
