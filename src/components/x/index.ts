@@ -16,6 +16,7 @@ import DropDown from './Dropdown';
 import Fade from './Fade';
 import { List } from './List';
 import ListTile from './ListTile';
+import ListItem from './ListItem';
 import ProgressBar from './ProgressBar';
 import Rating from './Rating';
 import Slider from './Slider';
@@ -45,6 +46,7 @@ export {
     Fade,
     ListTile,
     List,
+    ListItem,
     ProgressBar,
     Rating,
     Slider,

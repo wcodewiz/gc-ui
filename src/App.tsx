@@ -55,6 +55,8 @@ import BottomNavigator from './components/x/BottomNavigator';
 import BreadCrumbs from './components/x/BreadCrumb';
 import Accordion from './components/x/Accordion';
 import Choice, { ChoiceItem } from './components/x/Choice';
+import ContextMenu from './components/x/ContextMenu';
+import ListItem from './components/x/ListItem';
 
 const App = () => {
     const [_theme, setTheme] = useTheme();
@@ -113,6 +115,10 @@ const App = () => {
                 </Dialog>
                 <ProgressBar open={true} showBackdrop={false} type="indeterminate" color="skyblue" />
 
+                <ContextMenu className="px-4 py-2 bg-gray-500 rounded w-1/6" contextLabel="More Items">
+                    <ListItem className="bg-green-200 text-green-600 border ">File</ListItem>
+                    <ListItem className="bg-green-200 text-green-600 border ">Open</ListItem>
+                </ContextMenu>
                 <Choice activeClassName="bg-rose-500 px-4 rounded-full" current={0} items={[ChoiceItem('', <>Choose a gender</>), ChoiceItem('male', <>Male</>), ChoiceItem('female', <>Female</>)]} />
 
                 <Accordion prefixSwapIcon={<AiFillMinusCircle fontSize={20} />} prefixIcon={<AiFillPlusCircle fontSize={20} />} actionButton="left" heading="See how to use Grambid">
