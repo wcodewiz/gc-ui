@@ -9,6 +9,7 @@ export const LoadLazyState = createContext({ counter: 0 });
 
 interface prop {
     children: ReactNode;
+    themes?: Theme[];
 }
 
 export const getTheme = (theme: any): Theme => {
@@ -19,7 +20,7 @@ const GUIMASTER: FC<prop> = ({ ...props }) => {
 
     return (
         //@ts-ignore
-        <ThemeBox themes={themes} current={'light'}>
+        <ThemeBox themes={props.themes ? [...themes, ...props.themes] : themes} current={'light'}>
             {children}
         </ThemeBox>
     );
@@ -30,5 +31,5 @@ export const Gc: FC<prop> = ({ ...props }) => {
 
     //@ts-ignore
 
-    return <GUIMASTER>{children}</GUIMASTER>;
+    return <GUIMASTER {...props}>{children}</GUIMASTER>;
 };
