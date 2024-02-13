@@ -4,7 +4,7 @@ import { FunctionComponent } from 'react';
 import { OmitData, cn, getElevation, getFontSize, getRadius, getTransition, getWeights } from '../../utils/utils';
 import { useTheme } from '../../theme/useTheme';
 
-const ButtonVariant = cva('px-4 py-2', {
+const ButtonVariant = cva('px-4 py-2 transition-all duration-300', {
     variants: {
         variant: {
             default: '',

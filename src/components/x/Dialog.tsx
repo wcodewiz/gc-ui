@@ -3,6 +3,7 @@ import { BackDropProps, DialogBackDrop } from '../utils/Backdrop';
 import React from 'react';
 import { Container, ContainerProps } from '../primary/Container';
 import { OmitData } from '../../utils/utils';
+import { useOnce } from '../../hooks/useOnce';
 
 interface DialogProp extends BackDropProps, ContainerProps {
     closeIcon?: ReactNode;
@@ -10,11 +11,15 @@ interface DialogProp extends BackDropProps, ContainerProps {
 
 const Dialog: FunctionComponent<DialogProp> = ({ closeable = true, ...prop }) => {
     const { className, screen, radius, elevation, align, defaultVariant } = prop;
-    const [open, setOpen] = useState(prop.open);
+    const [open, setOpen] = useState(false);
+
+    useOnce(() => {
+        setOpen(prop.open);
+    }, [prop.open]);
 
     return (
         //@ts-ignore
-        <DialogBackDrop {...{ ...OmitData(prop, ['closeIcon']), closeable: true, open: open }}>
+        <DialogBackDrop {...{ ...OmitData(prop, ['closeIcon']), closeable: closeable, open: open }}>
             <Container className={`relative ${className}`} screen={screen} radius={radius} elevation={elevation} align={align} defaultVariant={defaultVariant}>
                 {prop.children}
                 {prop.closeIcon && (

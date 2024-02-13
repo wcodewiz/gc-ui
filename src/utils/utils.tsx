@@ -81,6 +81,8 @@ export const getRadius = {
     full: `rounded-full`
 };
 
+export const staticSpace = { xsmall: 'p-0.5', small: 'p-1', medium: 'p-4', large: 'p-8', xlarge: 'p-12' };
+
 export const getSize = {
     xxmall: `text-xs`,
     small: `text-sm`,

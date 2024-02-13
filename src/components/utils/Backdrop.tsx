@@ -26,6 +26,7 @@ const DialogBackDrop: FunctionComponent<BackDropProps> = ({ closeable = true, ..
         }
         setOpen(prop.open);
     }, [open, prop.open]);
+
     return (
         open && (
             <div
@@ -58,9 +59,10 @@ export const AlertVariant = cva('absolute w-auto h-auto', {
 
 export interface AlertProp extends BackDropProps, VariantProps<typeof AlertVariant> {
     duration?: number;
+    disableScrollbar?: boolean;
 }
 
-const AlertBackDrop: FunctionComponent<AlertProp> = ({ ...prop }) => {
+const AlertBackDrop: FunctionComponent<AlertProp> = ({ disableScrollbar = true, ...prop }) => {
     const { position, className } = prop;
     const classList = cn(AlertVariant({ position, className }));
     const id = hashes();
@@ -69,7 +71,9 @@ const AlertBackDrop: FunctionComponent<AlertProp> = ({ ...prop }) => {
     const { setBlurApp } = useContext(BlurApp);
     useOnce(() => {
         if (open) {
-            document.body.classList.add('overflow-hidden');
+            if (disableScrollbar) {
+                document.body.classList.add('overflow-hidden');
+            }
             const duration = (prop.duration ?? 2) * 1000;
             setTimeout(() => {
                 const alert = document.getElementById(`gc-alert-box-${id}`);
@@ -83,7 +87,9 @@ const AlertBackDrop: FunctionComponent<AlertProp> = ({ ...prop }) => {
                 }
             }, duration);
         } else {
-            document.body.classList.remove('overflow-hidden');
+            if (disableScrollbar) {
+                document.body.classList.remove('overflow-hidden');
+            }
         }
     }, [open]);
     return (

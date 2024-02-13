@@ -32,7 +32,7 @@ import LoadMore from './components/table/LoadMore';
 import { GCApp } from './GCApp';
 import Dialog from './components/x/Dialog';
 import Alert from './components/x/Alert';
-import { AiFillAccountBook, AiFillAndroid, AiFillCloseCircle, AiFillEdit, AiFillStar, AiOutlineUser } from 'react-icons/ai';
+import { AiFillAccountBook, AiFillAndroid, AiFillBank, AiFillCloseCircle, AiFillEdit, AiFillMinusCircle, AiFillPlusCircle, AiFillStar, AiFillWallet, AiOutlineUser } from 'react-icons/ai';
 import DropDown from './components/x/Dropdown';
 import ListTile from './components/x/ListTile';
 import { List } from './components/x/List';
@@ -46,6 +46,15 @@ import Zoom from './components/x/Zoom';
 import ProgressBar from './components/x/ProgressBar';
 import Rating from './components/x/Rating';
 import Slider from './components/x/Slider';
+import Snackbar from './components/x/snackbar';
+import Steps from './components/x/Steps';
+import ConfirmBox from './components/x/ConfirmBox';
+import Tab from './components/x/Tab';
+import Timeline from './components/x/TimeLine';
+import BottomNavigator from './components/x/BottomNavigator';
+import BreadCrumbs from './components/x/BreadCrumb';
+import Accordion from './components/x/Accordion';
+import Choice, { ChoiceItem } from './components/x/Choice';
 
 const App = () => {
     const [_theme, setTheme] = useTheme();
@@ -103,6 +112,28 @@ const App = () => {
                     </Content>
                 </Dialog>
                 <ProgressBar open={true} showBackdrop={false} type="indeterminate" color="skyblue" />
+
+                <Choice activeClassName="bg-rose-500 px-4 rounded-full" current={0} items={[ChoiceItem('', <>Choose a gender</>), ChoiceItem('male', <>Male</>), ChoiceItem('female', <>Female</>)]} />
+
+                <Accordion prefixSwapIcon={<AiFillMinusCircle fontSize={20} />} prefixIcon={<AiFillPlusCircle fontSize={20} />} actionButton="left" heading="See how to use Grambid">
+                    Welcome to Grambid Components
+                </Accordion>
+
+                <BreadCrumbs />
+                <BottomNavigator
+                    className="bg-green-500"
+                    current={0}
+                    label={['Bank', 'Profile', 'Wallet']}
+                    navigatorItems={[<AiFillBank fontSize={30} />, <AiOutlineUser fontSize={30} />, <AiFillWallet fontSize={30} />]}
+                />
+
+                <Timeline ropeColor="red" prefixIcon={<AiFillAndroid fontSize={20} />}>
+                    Whats up gys!!
+                </Timeline>
+                <Timeline ropeColor="red" prefixIcon={<AiFillAndroid fontSize={20} />}>
+                    Going great man
+                </Timeline>
+
                 <Card className="w-2/6 p-4 shadow-gray-800" radius={'meduim'} elevation={'medium'}>
                     <Zoom>
                         <Content className=" text-white bg-red-500 rounded-md">
@@ -221,6 +252,50 @@ const App = () => {
                 </Container>
 
                 <Rating emptyIcon={<AiFillStar className="text-white text-4xl" />} filledIcon={<AiFillStar className="text-rose-500 text-4xl" />} count={5} />
+
+                <Snackbar title="Account Login" open={false} duration={51} position={'bottomLeft'} className="bg-green-500 rounded-md text-white" onClose={() => {}}>
+                    Login Successful!
+                </Snackbar>
+
+                <Steps
+                    current={0}
+                    className="bg-green-500 text-white"
+                    radius={'full'}
+                    axis="horizontal"
+                    activeClassName="bg-rose-500 text-white"
+                    weight={'bold'}
+                    family={'sans'}
+                    spacing={'medium'}
+                    stepsItem={['Step 1', 'Step 2', 'Step 3', 'Step 4', 'step 5', 'Step 6', 'Step 7']}
+                    stepContent={[
+                        <Image key={101} src={PYTHON} variant={'outline'} fit={'cover'} sizeVariant={'full'} />,
+                        <Image key={101} src={PYTHON} variant={'outline'} fit={'cover'} sizeVariant={'full'} />,
+                        <Content>I am a Cool step</Content>,
+                        <Content>I am a Cool step 6</Content>,
+                        <Content>I am a Cool step 4</Content>,
+                        <Image key={101} src={PYTHON} variant={'outline'} fit={'cover'} sizeVariant={'full'} />,
+                        <Image key={101} src={PYTHON} variant={'outline'} fit={'cover'} sizeVariant={'full'} />
+                    ]}
+                />
+
+                <Tab activeClassName={'bg-rose-200 text-white px-4 rounded-full'} current={0} tabs={['tab 1', 'tab 2', 'tab 3']} panels={['text 1', 'text 2', 'text 3']} axis="vertical" />
+
+                <ConfirmBox
+                    heading={'Warning!'}
+                    show={false}
+                    okButton={
+                        <Button radius={'meduim'} className="bg-rose-500 text-white hover:bg-rose-300">
+                            Continue
+                        </Button>
+                    }
+                    cancelButton={
+                        <Button radius={'meduim'} className="bg-green-500 text-white  hover:bg-green-300">
+                            Cancel
+                        </Button>
+                    }
+                >
+                    Do you want to exit?
+                </ConfirmBox>
 
                 <Slider
                     autoplay={true}

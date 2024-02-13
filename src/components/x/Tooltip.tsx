@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactNode, useState } from 'react';
 import { useTheme } from '../../theme/useTheme';
-import { OmitData, cn, getFontSize, getRadius, getSize, getWeights } from '../../utils/utils';
+import { OmitData, cn, getFontSize, getRadius, getSize, getWeights, staticSpace } from '../../utils/utils';
 import { VariantProps, cva } from 'class-variance-authority';
 
 export const ToolTipVariant = cva('z-30', {
@@ -13,13 +13,7 @@ export const ToolTipVariant = cva('z-30', {
             topRight: 'bottom-full left-full tooltiptext-right',
             topLeft: 'bottom-full right-full tooltiptext-left'
         },
-        space: {
-            xsmall: 'p-0.5',
-            small: 'p-1',
-            medium: 'p-4',
-            large: 'p-8',
-            xlarge: 'p-12'
-        },
+        space: staticSpace,
         radius: getRadius,
         family: {
             sans: 'font-sans',
