@@ -10,11 +10,9 @@ interface RatingProps {
 }
 
 const Rating: FunctionComponent<RatingProps> = ({ rateNumber = 0, ...props }) => {
-    const [rated, setRated] = useState(false);
     const [ratedNumber, setRatedNumber] = useState(rateNumber);
 
     const rate = (target: HTMLSpanElement) => {
-        setRated(false);
         const children = (target.parentElement as HTMLDivElement).childNodes;
         const counter = parseInt(`${(target.firstChild as HTMLSpanElement).dataset.value}`);
         for (var i = 0; i < counter; i++) {
@@ -54,7 +52,6 @@ const Rating: FunctionComponent<RatingProps> = ({ rateNumber = 0, ...props }) =>
         }
         props.onRate && props.onRate(counter);
         setRatedNumber(counter);
-        setRated(true);
     };
 
     const loadIcons = () => {

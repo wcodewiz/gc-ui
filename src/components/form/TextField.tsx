@@ -2,7 +2,8 @@ import { VariantProps, cva } from 'class-variance-authority';
 import React, { FC, InputHTMLAttributes, ReactNode, useMemo, useState } from 'react';
 import { forwardRef } from 'react';
 import { useTheme } from '../../theme/useTheme';
-import { OmitData, capitlize, cn, getRadius, inputphone } from '../../utils/utils';
+import { OmitData, capitlize, cn, getRadius, hashes, inputphone } from '../../utils/utils';
+import useStopInputValueChange from '../../hooks/useStopInputValueChange';
 
 const TextFieldVariants = cva(`w-full px-4 block capitalize`, {
     variants: {
@@ -40,16 +41,20 @@ const TextFieldVariants = cva(`w-full px-4 block capitalize`, {
 interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement>, VariantProps<typeof TextFieldVariants> {
     prefixIcon?: ReactNode;
     suffixIcon?: ReactNode;
+    onChangeReady?: (value: string) => void;
+    changeCheckDuration?: number;
     capitalize?: boolean;
     isPhone?: boolean;
     change?: (ev: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const TextField: FC<TextFieldProps> = forwardRef<HTMLInputElement, TextFieldProps>(({ ...props }, ref) => {
+const TextField: FC<TextFieldProps> = forwardRef<HTMLInputElement, TextFieldProps>(({ changeCheckDuration = 2000, ...props }, ref) => {
     var { variant, outline, className, defaultVariant, sizeVariant, border, radius } = props;
     const [theme] = useTheme();
     const [value, setValue] = useState(0);
     const defaultClass = `outline-none border-none`;
+    const inputId = `gc-input-form-${hashes()}`;
+    useStopInputValueChange({ id: `.${inputId}`, onReady: (value) => props.onChangeReady && props.onChangeReady(value), waitDuration: changeCheckDuration });
 
     //@ts-ignore
     const cnv = cn(
@@ -91,7 +96,7 @@ const TextField: FC<TextFieldProps> = forwardRef<HTMLInputElement, TextFieldProp
                     }}
                     ref={ref}
                     {...{ ...OmitData(props, ['prefixIcon', 'capitalize', 'isPhone', 'change', 'suffixIcon', 'defaultVariant', 'border', 'sizeVariant', 'radius', 'variant', 'outline']) }}
-                    className={`${defaultClass} w-full h-full  bg-transparent`}
+                    className={`${inputId} ${defaultClass} w-full h-full  bg-transparent `}
                 />
                 {props.suffixIcon && props.suffixIcon}
             </div>
