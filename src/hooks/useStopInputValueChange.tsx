@@ -37,7 +37,7 @@ const useStopInputValueChange: FunctionComponent<useStopInputValueChangeProps> =
                 }
             });
         }
-    }, [value]);
+    }, [value, waiting]);
 
     return [value, waiting];
 };
