@@ -1,5 +1,5 @@
 import { VariantProps, cva } from 'class-variance-authority';
-import React from 'react';
+
 import { FunctionComponent, ReactNode } from 'react';
 import { OmitData, cn } from '../../utils/utils';
 export const TablVariant = cva('', {

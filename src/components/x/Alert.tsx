@@ -1,6 +1,6 @@
 import { FunctionComponent, ReactNode, useState } from 'react';
 import { AlertBackDrop, AlertProp } from '../utils/Backdrop';
-import React from 'react';
+
 import { Container, ContainerProps } from '../primary/Container';
 import { OmitData } from '../../utils/utils';
 

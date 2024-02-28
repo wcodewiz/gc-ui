@@ -1,5 +1,5 @@
 import { VariantProps, cva } from 'class-variance-authority';
-import React from 'react';
+
 import { FunctionComponent } from 'react';
 import { OmitData, cn, getElevation, getFontSize, getRadius, getWeights } from '../../utils/utils';
 import { useTheme } from '../../theme/useTheme';

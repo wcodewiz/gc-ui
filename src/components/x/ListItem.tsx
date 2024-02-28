@@ -1,5 +1,5 @@
 import { VariantProps } from 'class-variance-authority';
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { useTheme } from '../../theme/useTheme';
 import { cn, hashes, OmitData } from '../../utils/utils';
 import { ContentVariant } from '../primary/Content';

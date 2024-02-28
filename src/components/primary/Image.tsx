@@ -1,7 +1,7 @@
 import { FC, FunctionComponent } from 'react';
 import { useObserver } from '../../hooks/useObserver';
 import { OmitData, cn, getRadius, getSize, hashes } from '../../utils/utils';
-import React from 'react';
+
 import { VariantProps, cva } from 'class-variance-authority';
 import { useTheme } from '../../theme/useTheme';
 import ReactImageMagnify from 'react-image-magnify';

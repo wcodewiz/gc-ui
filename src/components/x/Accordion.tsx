@@ -1,6 +1,6 @@
 import { FunctionComponent, ReactNode, useState } from 'react';
 import { Container } from '../primary/Container';
-import React from 'react';
+
 import { Content, FlexRow } from '../primary';
 import { ContentProps } from '../primary/Content';
 import { OmitData } from '../../utils/utils';

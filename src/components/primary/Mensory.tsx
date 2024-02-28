@@ -1,6 +1,6 @@
 import { FunctionComponent, ReactNode } from 'react';
 import { GridBoxProps } from './Gridbox';
-import React from 'react';
+
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 interface MensoryProps extends GridBoxProps {

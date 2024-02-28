@@ -2,7 +2,7 @@ import { VariantProps } from 'class-variance-authority';
 import { FunctionComponent } from 'react';
 import { TextFieldVariants } from './TextField';
 import { useTheme } from '../../theme/useTheme';
-import React from 'react';
+
 import { OmitData, cn } from '../../utils/utils';
 
 interface FormSelectProps extends React.DetailedHTMLProps<React.SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>, VariantProps<typeof TextFieldVariants> {}

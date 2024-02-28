@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactNode, useState } from 'react';
+import { FunctionComponent, ReactNode, useState } from 'react';
 import { useTheme } from '../../theme/useTheme';
 import { OmitData, cn, getFontSize, getRadius, getSize, getWeights, staticSpace } from '../../utils/utils';
 import { VariantProps, cva } from 'class-variance-authority';

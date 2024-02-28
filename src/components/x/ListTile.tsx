@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactNode } from 'react';
+import { FunctionComponent, ReactNode } from 'react';
 import { Container, ContainerProps } from '../primary/Container';
 import { VariantProps, cva } from 'class-variance-authority';
 import { OmitData, cn, hashes } from '../../utils/utils';

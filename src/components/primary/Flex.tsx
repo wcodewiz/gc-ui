@@ -1,7 +1,6 @@
 import { VariantProps, cva } from 'class-variance-authority';
 import { FunctionComponent } from 'react';
 import { OmitData, cn } from '../../utils/utils';
-import React from 'react';
 
 const FlexVariant = cva('flex gap-1', {
     variants: {

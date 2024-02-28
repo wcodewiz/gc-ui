@@ -1,6 +1,6 @@
 import { FunctionComponent, ReactNode, useState } from 'react';
 import { FlexColumn } from '../primary';
-import React from 'react';
+
 import { useOnce } from '../../hooks/useOnce';
 
 class choiceItem {

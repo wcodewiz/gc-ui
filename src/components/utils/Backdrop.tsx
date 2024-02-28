@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { FunctionComponent, useState } from 'react';
 import { useOnce } from '../../hooks/useOnce';
 import { BlurApp } from '../../GC';

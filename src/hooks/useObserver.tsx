@@ -1,4 +1,3 @@
-import React from 'react';
 import { useOnce } from './useOnce';
 const observer = new IntersectionObserver(onIntersection, {});
 const loadedImages: string[] = [];

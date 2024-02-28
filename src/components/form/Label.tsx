@@ -1,7 +1,7 @@
 import { VariantProps, cva } from 'class-variance-authority';
 import { OmitData, cn, getRadius, getSize, getWeights } from '../../utils/utils';
 import { FunctionComponent, LabelHTMLAttributes, ReactNode } from 'react';
-import React from 'react';
+
 import { useTheme } from '../../theme/useTheme';
 
 const LabelVariants = cva(`px-4 py-1`, {

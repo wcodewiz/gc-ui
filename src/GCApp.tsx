@@ -1,7 +1,6 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { FC, useState } from 'react';
 import { BlurApp, LoadLazyState } from './GC';
-import './assets/style.css';
 import { useTheme } from './theme/useTheme';
 
 interface prop {

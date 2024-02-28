@@ -1,4 +1,3 @@
-import React from 'react';
 import { FunctionComponent } from 'react';
 
 interface SpinProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {}

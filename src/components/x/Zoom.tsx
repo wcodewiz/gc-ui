@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { hashes } from '../../utils/utils';
 import { useOnce } from '../../hooks/useOnce';
 

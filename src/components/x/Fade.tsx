@@ -1,5 +1,5 @@
 import { VariantProps, cva } from 'class-variance-authority';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FunctionComponent } from 'react';
 import { useOnce } from '../../hooks/useOnce';
 import { cn, hashes } from '../../utils/utils';

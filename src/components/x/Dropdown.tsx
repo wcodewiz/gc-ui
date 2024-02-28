@@ -2,7 +2,7 @@ import { FunctionComponent, ReactNode } from 'react';
 import { BackDropProps, DropDownBackDrop } from '../utils/Backdrop';
 import { Container, ContainerProps } from '../primary/Container';
 import { OmitData } from '../../utils/utils';
-import React from 'react';
+
 import { Flex } from '../primary';
 
 //@ts-ignore

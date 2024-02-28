@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactNode } from 'react';
+import { FunctionComponent, ReactNode } from 'react';
 import { hashes } from '../../utils/utils';
 import { useOnce } from '../../hooks/useOnce';
 import { List } from './List';

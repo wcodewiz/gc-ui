@@ -1,5 +1,5 @@
 import { VariantProps, cva } from 'class-variance-authority';
-import React from 'react';
+
 import { FunctionComponent } from 'react';
 import { cn, getRadius, getSize } from '../../utils/utils';
 const ChipVariants = cva(`px-2 py-1`, {

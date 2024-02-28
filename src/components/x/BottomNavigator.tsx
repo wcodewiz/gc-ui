@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { FunctionComponent } from 'react';
 import { FlexColumn, FlexRow } from '../primary';
 import { useOnce } from '../../hooks/useOnce';

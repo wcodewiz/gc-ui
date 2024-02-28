@@ -1,7 +1,7 @@
 import { FunctionComponent, ReactNode, useState } from 'react';
 import { ContentProps, ContentVariant } from '../primary/Content';
 import { useOnce } from '../../hooks/useOnce';
-import React from 'react';
+
 import { useTheme } from '../../theme/useTheme';
 import { OmitData, cn } from '../../utils/utils';
 

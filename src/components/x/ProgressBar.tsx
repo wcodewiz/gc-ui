@@ -1,4 +1,3 @@
-import React from 'react';
 import { FunctionComponent } from 'react';
 import { useOnce } from '../../hooks/useOnce';
 import { preventScroll, revertScroll } from '../../utils/utils';

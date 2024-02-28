@@ -1,4 +1,3 @@
-import React from 'react';
 import { FunctionComponent } from 'react';
 import { Container, Flex } from '../primary';
 import { ContainerProps } from '../primary/Container';

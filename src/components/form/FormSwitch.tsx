@@ -3,7 +3,7 @@ import { CheckboxProps } from './FormCheckbox';
 import { useTheme } from '../../theme/useTheme';
 import { cn, getRadius } from '../../utils/utils';
 import { cva } from 'class-variance-authority';
-import React from 'react';
+
 import { Theme } from 'gc-theme';
 
 const SwitchVariants = cva(`block capitalize`, {

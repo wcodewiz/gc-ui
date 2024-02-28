@@ -1,5 +1,5 @@
 import { VariantProps, cva } from 'class-variance-authority';
-import React, { FC, InputHTMLAttributes, ReactNode, useMemo, useState } from 'react';
+import { FC, InputHTMLAttributes, ReactNode, useMemo, useState } from 'react';
 import { forwardRef } from 'react';
 import { useTheme } from '../../theme/useTheme';
 import { OmitData, capitlize, cn, getRadius, hashes, inputphone } from '../../utils/utils';

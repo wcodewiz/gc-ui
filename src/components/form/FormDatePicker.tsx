@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { OmitData, cn } from '../../utils/utils';
 import { useTheme } from '../../theme/useTheme';
 import { TextFieldProps, TextFieldVariants } from './TextField';

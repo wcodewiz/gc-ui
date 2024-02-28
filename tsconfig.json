@@ -2,18 +2,22 @@
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
         "declaration": true,
-        "esModuleInterop": true,
-        "jsx": "react",
-        "lib": ["ES5", "ES2015", "ES2016", "DOM", "ESNext"],
-        "types": ["node"],
-        "module": "ES2015",
+        "esModuleInterop": false,
+        "jsx": "react-jsx",
+        "useDefineForClassFields": true,
+        "skipDefaultLibCheck": true,
+        "lib": ["ES5", "ES2015", "DOM.Iterable", "ES2016", "DOM", "ESNext"],
+        "module": "ESNext",
         "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "noEmit": true,
         "noImplicitAny": true,
         "noUnusedLocals": true,
         "outDir": "dist/esm",
-        "sourceMap": true,
+        "sourceMap": false,
+        "typeRoots": ["./dist/index.d.ts"],
         "strict": true,
         "target": "ES6"
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx"]
+    "include": ["src/**/*.ts", "./src/index.ts", "src/**/*.tsx"]
 }

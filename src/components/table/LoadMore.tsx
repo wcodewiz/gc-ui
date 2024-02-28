@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 import { hashes } from '../../utils/utils';
-import React from 'react';
+
 import { useOnce } from '../../hooks/useOnce';
 
 interface LoadMoreProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

@@ -1,7 +1,6 @@
 import { VariantProps, cva } from 'class-variance-authority';
 import { FormHTMLAttributes, FunctionComponent, forwardRef } from 'react';
 import { useTheme } from '../../theme/useTheme';
-import React from 'react';
 import { OmitData, cn, hashes } from '../../utils/utils';
 import { GInputs, GValidate } from 'gc-form';
 

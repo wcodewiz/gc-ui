@@ -1,6 +1,6 @@
 import { FunctionComponent, ReactNode, useState } from 'react';
 import Dialog from './Dialog';
-import React from 'react';
+
 import { Content, Heading, Flex } from '../primary';
 import { ContentProps } from '../primary/Content';
 import { useOnce } from '../../hooks/useOnce';

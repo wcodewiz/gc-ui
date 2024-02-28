@@ -1,6 +1,7 @@
 import { Theme, ThemeBox } from 'gc-theme';
 import { GCThemeDark, GCThemeLight } from './theme';
-import React, { FC, ReactNode, createContext } from 'react';
+import { FC, ReactNode, createContext } from 'react';
+import { LoadCss } from './utils/css';
 
 const defaultTheme = new GCThemeLight();
 const themes: Theme[] = [defaultTheme, new GCThemeDark()];
@@ -11,6 +12,7 @@ interface prop {
     children: ReactNode;
     themes?: Theme[];
 }
+LoadCss();
 
 export const getTheme = (theme: any): Theme => {
     return (theme && (theme as Theme)) ?? defaultTheme;

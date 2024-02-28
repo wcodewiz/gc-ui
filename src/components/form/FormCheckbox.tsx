@@ -1,4 +1,4 @@
-import React, { FunctionComponent, InputHTMLAttributes, ReactNode } from 'react';
+import { FunctionComponent, InputHTMLAttributes, ReactNode } from 'react';
 import { OmitData, cn, getRadius } from '../../utils/utils';
 import { VariantProps, cva } from 'class-variance-authority';
 import { useTheme } from '../../theme/useTheme';

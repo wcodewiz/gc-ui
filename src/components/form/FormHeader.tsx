@@ -2,7 +2,7 @@ import { FunctionComponent, ReactNode } from 'react';
 import { VariantProps } from 'class-variance-authority';
 import { LabelVariants } from './Label';
 import { cn } from '../../utils/utils';
-import React from 'react';
+
 import { useTheme } from '../../theme/useTheme';
 
 //@ts-ignore
