@@ -16,6 +16,9 @@
     },
     "author": "Samuel Clinton",
     "license": "MIT",
+    "repository": {
+        "url": "https://github.com/wcodewiz/sweet-tailwind-ui"
+    },
     "publishConfig": {
         "access": "public"
     },
