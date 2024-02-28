@@ -1,2 +1,3 @@
 # gc-ui
-a grambid social media ui
+
+a tailwind component library
